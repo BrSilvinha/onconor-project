@@ -1,0 +1,79 @@
+/* Estilo general para contenedores */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para la barra rectangular */
+.bar-rectangular {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Estilo para el menú */
+#menu {
+    display: none;
+    background-color: #e7ebee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    z-index: 1000;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Estilo para el ícono del menú */
+.menu-icon {
+    position: fixed;
+    left: 10px; /* Posiciona el ícono del menú en el lado izquierdo */
+    top: 10px; /* Ajusta la posición vertical si es necesario */
+    cursor: pointer;
+    z-index: 1100; /* Asegura que esté sobre otros elementos */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 1050px) {
+    .login-container {
+        flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    }
+
+    .left-section {
+        display: none; /* Oculta la sección del logo en móviles */
+    }
+
+    .line {
+        display: none; /* Oculta la línea vertical en móviles */
+    }
+
+    .mobile-logo {
+        width: 300px; /* Cambia a un tamaño fijo que desees */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: 0 auto; /* Centra el logo */
+        display: block; /* Asegúrate de que el logo se muestre como bloque */
+        margin-bottom: 20px; /* Espacio entre el logo y el formulario */
+    }
+
+    .right-section {
+        width: 100%; /* Asegura que el formulario ocupe todo el ancho */
+        padding: 20px; /* Agrega un poco de padding */
+        text-align: center; /* Centra el texto del formulario */
+    }
+
+    /* Estilo para el contenedor del menú en móviles */
+    #menu {
+        width: 100%; /* El menú ocupa todo el ancho en dispositivos móviles */
+    }
+}
+
+/* Ocultar la imagen en dispositivos más grandes */
+@media (min-width: 1050px) {
+    .mobile-logo {
+        display: none; /* Oculta la imagen en pantallas más grandes */
+    }
+}

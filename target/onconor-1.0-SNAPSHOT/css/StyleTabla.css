@@ -1,0 +1,223 @@
+.modal-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #007bff; /* Color azul */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Centrado del botón de confirmar cita */
+.modal-content .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Color de fondo de la página */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white; /* Fondo blanco para la tabla */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra de la tabla */
+        }
+        th, td {
+            padding: 12px;
+            text-align: center; /* Centrar el texto en las celdas */
+            border-bottom: 1px solid #ddd; /* Línea separadora entre filas */
+        }
+        th {
+            background-color: #007bff; /* Color de fondo para el encabezado */
+            color: white; /* Color de texto del encabezado */
+        }
+        tr:hover {
+            background-color: #f1f1f1; /* Color al pasar el mouse sobre una fila */
+        }
+        button {
+            background-color: #007bff; /* Color de fondo del botón */
+            color: white; /* Color de texto del botón */
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px; /* Bordes redondeados */
+            text-align: center; /* Centra el texto del botón */
+        }
+        button:hover {
+            background-color: #0056b3; /* Color al pasar el mouse sobre el botón */
+        }
+        h2 {
+            color: white; /* Color del título de la lista de usuarios */
+        }
+
+        /* Estilo para el contenedor del menú */
+        #menu {
+            display: none;
+            background-color: #e7ebee;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100%;
+            z-index: 1000;
+            flex-direction: column;
+            padding: 20px;
+        }
+        /* Estilo para el ícono del menú */
+        .menu-icon {
+            position: fixed;
+            left: 10px; /* Posiciona el ícono del menú en el lado izquierdo */
+            top: 10px; /* Ajusta la posición vertical si es necesario */
+            cursor: pointer;
+            z-index: 1100; /* Asegura que esté sobre otros elementos */
+        }
+
+        /* Estilo para los enlaces del menú */
+        #menu a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase; /* Texto en mayúsculas */
+            text-align: center; /* Centra el texto */
+            display: block; /* Hace que cada enlace ocupe toda la línea */
+            padding: 10px; /* Espaciado alrededor del texto */
+        }
+
+        /* Estilo para centrar el contenido de la tabla */
+        .table-actions {
+            text-align: center; /* Centra el contenido de la celda */
+        }
+        /* Modal general */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animación de entrada del modal */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos de formularios en el modal */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-weight: 500;
+}
+
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #0066cc;
+}
+
+        /* Estilo del botón de Confirmar Cita */
+        .modal-content button[type="submit"] {
+            background-color: #007bff; /* Azul */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover para el botón */
+        .modal-content button[type="submit"]:hover {
+            background-color: #0056b3; /* Azul oscuro */
+        }
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #000;
+}
+        .logo-imagen {
+            display: block;
+            margin: 0 auto;
+            width: 150px; /* Tamaño aumentado */
+            max-width: 100%; /* Responsivo */
+            height: auto;
+        }
+/* Responsividad */
+@media (max-width: 1050px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modal-content h3 {
+        font-size: 1.2em;
+    }
+
+    .form-group input[type="date"],
+    .form-group input[type="time"],
+    .form-group input[type="text"] {
+        font-size: 0.9em;
+    }
+
+    .modal-content button[type="submit"] {
+        font-size: 1em;
+    }
+    /* Estilo para el contenedor del menú en móviles */
+    #menu {
+        width: 100%; /* El menú ocupa todo el ancho en dispositivos móviles */
+    }
+    
+    
+}

@@ -1,0 +1,287 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff; /* Fondo blanco para toda la página */
+}
+
+/* Estilo del contenedor del login */
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff; /* Fondo blanco para el contenedor de login */
+    position: relative; /* Necesario para posicionar la línea */
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para la sección izquierda */
+}
+
+.left-section .logo {
+    width: 500px; /* Aumentar el tamaño de la imagen */
+    margin-bottom: 20px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Alineamos el contenido al centro */
+    padding: 50px;
+    background-color: #ffffff; /* Fondo blanco para la sección de login */
+}
+
+.right-section h2 {
+    font-size: 2.5rem; /* Cambiamos el tamaño de "LOGIN" */
+    color: #0066b2;
+    margin-bottom: 30px; /* Ajustamos el margen */
+    text-align: center; /* Centrar el texto */
+    font-weight: bold; /* Cambiamos a negrita */
+    text-transform: uppercase; /* Cambiamos a mayúsculas */
+}
+
+.input-container {
+    margin-bottom: 15px; /* Reducimos el margen entre campos */
+}
+
+.input-container input {
+    width: 300px; /* Establecemos un ancho fijo más pequeño */
+    padding: 10px;
+    font-size: 1rem; /* Ajustamos el tamaño del texto */
+    border: none;
+    border-bottom: 2px solid #E0E0E0;
+    outline: none;
+    color: #666666;
+    transition: border-bottom-color 0.3s;
+}
+
+.input-container input:focus {
+    border-bottom-color: #0066b2; /* Cambia el color al enfocar el campo */
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.options a {
+    color: #009688;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    color: #0066b2;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Botón alineado a la derecha */
+}
+
+.login-btn {
+    width: 120px; /* Hacemos el botón un poco más pequeño */
+    padding: 8px; /* Ajustamos el padding */
+    font-size: 1rem;
+    color: white;
+    background-color: #333333;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #555555; /* Cambia el color al pasar el ratón */
+}
+
+/* Estilo para la línea divisoria */
+.line {
+    width: 2px; /* Ancho de la línea */
+    background-color: #0066b2; /* Color de la línea, igual al color del login */
+    height: 93%; /* Altura completa */
+    position: absolute; /* Posicionamiento absoluto */
+    left: 50%; /* Centrar horizontalmente */
+    top: 30px; /* Ajusta este valor para bajar la línea */
+    transform: translateX(-50%); /* Ajustar para centrar la línea */
+}
+
+/* Contenedor general */
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #2e74bd; /* Fondo azul para la página de bienvenida */
+}
+
+/* Contenido principal */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #2e74bd; /* Fondo azul para el contenido principal */
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Barra superior */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10; /* Asegura que el encabezado esté siempre encima */
+}
+
+/* Estilo para el contenedor de información del usuario */
+#user-info {
+    display: none; /* Oculto inicialmente */
+    flex-direction: column; /* Disposición vertical */
+    align-items: flex-end; /* Alinear a la derecha */
+}
+
+.user-info #user-name {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Icono de usuario */
+.user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #2e74bd;
+    margin-left: 10px;
+}
+
+.logout {
+    margin-left: 10px;
+    color: #ff4d4d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Imagen principal */
+.main-image {
+    text-align: center; /* Centra la imagen en el contenedor */
+}
+
+/* Imagen principal */
+.main-image img {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho disponible */
+    max-height: 100%; /* Ajustar la altura máxima para no ocupar todo el espacio vertical */
+    object-fit: cover; /* Asegurar que la imagen cubra el área sin distorsionarse */
+    display: block;
+    margin: 30px auto;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Estilo para la barra rectangular */
+.bar-rectangular {
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Altura de la barra */
+    background-color: #2e74bd; /* Color gris */
+    display: flex; /* Usar flexbox para alinear los elementos */
+    align-items: center; /* Centrar verticalmente */
+    padding: 10px 20px; /* Espaciado horizontal */
+    margin-top: 10px; /* Espaciado vertical reducido para que esté más arriba */
+}
+
+/* Estilo para la información dentro de la barra */
+.user-info-inside {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: flex-end; /* Alinear a la derecha */
+    width: 100%; /* Ancho completo */
+}
+
+/* Estilo para el nombre completo */
+.full-name {
+    margin-right: -10px; /* Espacio entre el nombre y el ícono */
+}
+
+/* Estilo para el icono del usuario */
+.user-icon {
+    font-size: 24px; /* Tamaño de la letra para la inicial */
+    font-weight: bold; /* Hacer la inicial en negrita */
+}
+
+/* Estilo para el botón de cerrar sesión */
+.logout {
+    margin-top: 3px; /* Margen superior para separación del nombre */
+    text-decoration: none; /* Quitar subrayado */
+    color: red; /* Color rojo para el hipervínculo */
+    display: block; /* Mostrar como bloque para que esté en una nueva línea */
+    margin-left: auto; /* Empujar el botón hacia la derecha */
+    font-size: 16px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para la imagen del logo */
+.logo-image {
+    height: 70px; /* Ajusta la altura según sea necesario */
+    width: auto; /* Mantiene la relación de aspecto */
+}
+/* Estilo para el nombre del usuario */
+#user-name {
+    margin-right: 16px; /* Espacio a la derecha */
+    font-weight: bold; /* Texto en negrita */
+    color: white; /* Color del texto en blanco */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+#menu {
+    display: none; /* Inicialmente oculto */
+    background-color: #e7ebee; /* Color de fondo del menú */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#menu h2 {
+    text-align: center; /* Centrar el texto */
+    font-weight: bold; /* Texto en negrita */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.menu-icon {
+    color: white; /* Cambiar a color blanco */
+    font-size: 24px; /* Ajustar el tamaño */
+    margin-left: 20px; /* Espaciado entre logo y menú */
+}
+
+#menu ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+#menu li {
+    padding: 8px 12px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+}
+
+#menu li:hover {
+    background-color: #d0d7d9; /* Color de fondo al pasar el mouse */
+}
